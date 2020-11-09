@@ -39,12 +39,10 @@ def robust(data, cols):
 def standard(data, cols):
     s_scaler = StandardScaler()
     s_scaler.fit(data[cols])
-    data[cols] = s_scaler.transform(data[cols])
-    return data
+    return s_scaler.transform(data[cols])
 
 
 def min_max(data, cols):
     normalizer = MinMaxScaler()
     normalizer.fit(data[cols])
-    data[cols] = normalizer.transform(data[cols])
-    return data
+    return normalizer.transform(data[cols])
