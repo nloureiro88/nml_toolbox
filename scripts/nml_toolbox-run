@@ -15,13 +15,13 @@ if __name__ == '__main__':
     description = 'nml_toolbox_description'
     # https://docs.python.org/3/library/argparse.html
     # https://docs.python.org/3/howto/argparse.html
-    parser = argparse.ArgumentParser(description=description, usage=usage)
-    args = parser.parse_args()
-    folder_source, _ = split(nml_toolbox.__file__)
-    df = pd.read_csv('{}/data/data.csv.gz'.format(folder_source))
-    print('  nml_toolbox/data/data.csv.gz Loaded')
+    # parser = argparse.ArgumentParser(description=description, usage=usage)
+    # args = parser.parse_args()
+    # folder_source, _ = split(nml_toolbox.__file__)
+    # df = pd.read_csv('{}/data/data.csv.gz'.format(folder_source))
+    # print('  nml_toolbox/data/data.csv.gz Loaded')
 
-    res = clean_data(df)
-    res.to_csv('out.csv', index=False)
-    print('==> out.csv MADE ')
-    print('    shape is {}'.format(res.shape))
+    # res = clean_data(df)
+    # res.to_csv('out.csv', index=False)
+    # print('==> out.csv MADE ')
+    # print('    shape is {}'.format(res.shape))
